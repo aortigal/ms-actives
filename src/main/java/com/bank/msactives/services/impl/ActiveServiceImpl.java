@@ -1,6 +1,5 @@
 package com.bank.msactives.services.impl;
 
-import com.bank.msactives.controllers.ActiveRestController;
 import com.bank.msactives.handler.ResponseHandler;
 import com.bank.msactives.models.dao.ActiveDao;
 import com.bank.msactives.models.documents.Active;
@@ -23,7 +22,7 @@ public class ActiveServiceImpl implements ActiveService {
 
     @Autowired
     private ClientService clientService;
-    private static final Logger log = LoggerFactory.getLogger(ActiveRestController.class);
+    private static final Logger log = LoggerFactory.getLogger(ActiveServiceImpl.class);
 
     @Override
     public Mono<ResponseHandler> findAll() {
