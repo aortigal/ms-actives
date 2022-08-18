@@ -1,13 +1,21 @@
+server:
+  port: 8083
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
 spring:
-  application:
-    name: ms-actives
-
-  cloud:
-    config:
-      uri: http://localhost:8094
-      username: root
-      password: s3cr3t
-
   data:
     mongodb:
       uri: mongodb://localhost:27017/spring_boot
+
+app:
+  module:
+    service:
+      url: http://localhost:8088

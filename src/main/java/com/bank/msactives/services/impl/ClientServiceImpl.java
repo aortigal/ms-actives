@@ -2,16 +2,18 @@ package com.bank.msactives.services.impl;
 
 import com.bank.msactives.models.utils.ResponseClient;
 import com.bank.msactives.services.ClientService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @Service
-public class ClientImpl implements ClientService {
+public class ClientServiceImpl implements ClientService {
 
-    @Autowired
-    WebClient webClient;
+    private final WebClient webClient;
+
+    public ClientServiceImpl(WebClient.Builder webClientBuilder){
+        this.webClient = webClientBuilder.baseUrl("http://localhost:8080").build();
+    }
 
     @Override
     public Mono<ResponseClient> findByCode(String id)
