@@ -105,4 +105,19 @@ public class ActiveServiceImpl implements ActiveService {
         }).doFinally(fin -> log.info("[END] update Active"));
 
     }
+
+    @Override
+    public Mono<ResponseHandler> activesByClient(String id) {
+        log.info("[INI] activesByClient Active");
+        return dao.findAll()
+                .filter(active ->
+                        active.getClientId().equals(id)
+                )
+                .collectList()
+                .doOnNext(active -> log.info(active.toString()))
+                .map(actives -> new ResponseHandler("Done", HttpStatus.OK, actives))
+                .onErrorResume(error -> Mono.just(new ResponseHandler(error.getMessage(), HttpStatus.BAD_REQUEST, null)))
+                .switchIfEmpty(Mono.just(new ResponseHandler("No Content", HttpStatus.BAD_REQUEST, null)))
+                .doFinally(fin -> log.info("[END] activesByClient Active"));
+    }
 }

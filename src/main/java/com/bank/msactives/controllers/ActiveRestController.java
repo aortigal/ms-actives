@@ -47,4 +47,9 @@ public class ActiveRestController
     public Mono<ResponseHandler> fallBackClient(RuntimeException runtimeException){
         return Mono.just(new ResponseHandler("Microservicio externo no responde", HttpStatus.BAD_REQUEST,runtimeException.getMessage()));
     }
+
+    @GetMapping("/client/{id}")
+    public Mono<ResponseHandler> activesByClient(@PathVariable String id) {
+        return activeService.activesByClient(id);
+    }
 }

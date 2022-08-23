@@ -14,4 +14,6 @@ public interface ActiveService {
     Mono<ResponseHandler> update(String id, Active act);
 
     Mono<ResponseHandler> delete(String id);
+
+    Mono<ResponseHandler> activesByClient(String id);
 }
