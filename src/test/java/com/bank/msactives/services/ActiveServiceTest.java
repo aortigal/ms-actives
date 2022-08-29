@@ -35,7 +35,7 @@ public class ActiveServiceTest {
 
         Credit credit = new Credit();
         credit.setId("62edbc767ba3a05551fb10d1");
-        credit.setCreditMont(Float.parseFloat("100.00"));
+        credit.setCreditAmount(Float.parseFloat("100.00"));
 
         List<Credit> creditList = new ArrayList<>();
         creditList.add(credit);
@@ -60,7 +60,7 @@ public class ActiveServiceTest {
 
         Credit credit = new Credit();
         credit.setId("62edbc767ba3a05551fb10d1");
-        credit.setCreditMont(Float.parseFloat("100.00"));
+        credit.setCreditAmount(Float.parseFloat("100.00"));
 
         List<Credit> creditList = new ArrayList<>();
         creditList.add(credit);
@@ -85,7 +85,7 @@ public class ActiveServiceTest {
 
         Credit credit = new Credit();
         credit.setId("62edbc767ba3a05551fb10d1");
-        credit.setCreditMont(Float.parseFloat("100.00"));
+        credit.setCreditAmount(Float.parseFloat("100.00"));
 
         List<Credit> creditList = new ArrayList<>();
         creditList.add(credit);
@@ -116,7 +116,7 @@ public class ActiveServiceTest {
 
         Credit credit = new Credit();
         credit.setId("62edbc767ba3a05551fb10d1");
-        credit.setCreditMont(Float.parseFloat("100.00"));
+        credit.setCreditAmount(Float.parseFloat("100.00"));
 
         List<Credit> creditList = new ArrayList<>();
         creditList.add(credit);
@@ -151,7 +151,7 @@ public class ActiveServiceTest {
 
         Credit credit = new Credit();
         credit.setId("62edbc767ba3a05551fb10d1");
-        credit.setCreditMont(Float.parseFloat("100.00"));
+        credit.setCreditAmount(Float.parseFloat("100.00"));
 
         List<Credit> creditList = new ArrayList<>();
         creditList.add(credit);

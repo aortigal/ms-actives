@@ -7,5 +7,5 @@ import lombok.Data;
 public class Credit extends Audit
 {
     private String id;
-    private Float creditMont;
+    private Float creditAmount;
 }
